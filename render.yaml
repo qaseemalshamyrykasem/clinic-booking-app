@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: clinic-booking-frontend
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: serve -s build
+    env: node
+    plan: free
+    staticPublish: build/
