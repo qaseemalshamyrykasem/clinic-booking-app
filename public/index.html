@@ -3,9 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>نظام حجز مواعيد العيادة</title>
+  <meta name="theme-color" content="#3498db">
+  <meta name="description" content="نظام حجز مواعيد العيادة الطبية">
+  
+  <title>حجز مواعيد العيادة</title>
+  
+  <!-- خطوط Google Fonts للعربية -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+  
+  <!-- iOS Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <style>
+    /* تنسيقات أولية للتحميم السريع */
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f5f7fa;
+    }
+    /* تنسيق للشاشات الصغيرة */
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- عنصر الجذر لتركيب React -->
   <div id="root"></div>
+  
+  <!-- رسالة ترحيب إذا تعطّل JavaScript -->
+  <noscript>
+    <div style="text-align: center; padding: 2rem; color: #e74c3c;">
+      <h2>⚠️ يبدو أن JavaScript غير مفعّل في متصفحك!</h2>
+      <p>هذا التطبيق يحتاج إلى JavaScript ليعمل بشكل صحيح. يرجى تفعيله والمحاولة مرة أخرى.</p>
+    </div>
+  </noscript>
+  
+  <!-- Script لتحميد React -->
+  <script>
+    // رسالة تحميل أثناء انتظار تفعيل التطبيق
+    document.getElementById('root').innerHTML = `
+      <div style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #3498db;
+        color: white;
+        flex-direction: column;
+      ">
+        <h1 style="font-size: 2rem;">نظام حجز المواعيد الطبية</h1>
+        <p>جاري التحميل، الرجاء الانتظار...</p>
+      </div>
+    `;
+  </script>
 </body>
 </html>
